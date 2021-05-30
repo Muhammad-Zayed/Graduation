@@ -28,6 +28,12 @@
             <!-- start image side -->
             <div class="col-lg-6 image_side">
                 <div class="overlay row g-0 justify-content-center align-items-center">
+                    <!-------- start Home Button new update ------->
+                    <div class="home_btn">
+                        <a href="{{route('index')}}"><img src="images/video-chat.png" alt=""></a>
+                    </div>
+                    <!-------- end Home Button new update ------->
+
                     <div class="content row">
                         <h2>you don't have an acount ?</h2>
                         <a class="login_page" href="{{ route('register') }}">signup</a>

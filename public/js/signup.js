@@ -57,7 +57,7 @@ var emailValidation = function emailValidation(e) {
     emailErroriIcon.classList.remove('fa-check-circle');
     emailErroriIcon.classList.remove('fa-exclamation-circle');
   } else {
-    var re = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if (re.test(emailInput.value)) {
       e.target.offsetParent.classList.remove('active');

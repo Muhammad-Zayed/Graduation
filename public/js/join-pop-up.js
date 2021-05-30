@@ -4,7 +4,6 @@ var joinMeet = document.querySelector('#join_meeting');
 var closeBtn = document.querySelector('.close_btn');
 var joinBox = document.querySelector('.join_box_container');
 joinMeet.addEventListener('click', function (e) {
-  e.preventDefault();
   return open(e);
 });
 closeBtn.addEventListener('click', function (e) {

@@ -746,7 +746,8 @@ video::-webkit-media-controls-enclosure {
   position: fixed;
   max-width: 400px;
   top: 0;
-  right: 10px;
+  left: 10px;
+  z-index: 999;
 }
 
 .msg_container .msg {
@@ -834,6 +835,21 @@ video::-webkit-media-controls-enclosure {
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image_side .overlay .home_btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.image_side .overlay .home_btn a {
+  text-decoration: none;
+}
+
+.image_side .overlay .home_btn a img {
+  width: 55px;
+  height: 55px;
 }
 
 .image_side .overlay .content {

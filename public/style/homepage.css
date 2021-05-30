@@ -877,7 +877,8 @@ video::-webkit-media-controls-enclosure {
   position: fixed;
   max-width: 400px;
   top: 0;
-  right: 10px;
+  left: 10px;
+  z-index: 999;
 }
 
 .msg_container .msg {
