@@ -59,11 +59,16 @@
                         <div class="item row justify-content-center align-items-center g-0">
                             <p class="item_title col-2">join URL</p>
                             <textarea class="item_cont col-9" id="invite_code"
-                                disabled>https://us04web.zoom.us/j/7922818925?pwd=VWpoZTJOOWUrVjNWQmZUcDgrV3ltUT09</textarea>
+                                disabled>http://127.0.0.1:8000/meeting/{{$user->id}} </textarea>
                         </div>
                         <div class="item row justify-content-center align-items-center g-0">
                             <p class="item_title col-2">email</p>
                             <p class="item_cont col-9">{{$user->email}}</p>
+                        </div>
+
+                        <div class="item row justify-content-center align-items-center g-0">
+                            <p class="item_title col-3">meeting password</p>
+                            <p class="item_cont col-8">: {{$user->meeting_password}}</p>
                         </div>
 
                         <div class="option_btn row align-items-center g-0">

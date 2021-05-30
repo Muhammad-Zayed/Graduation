@@ -82,8 +82,8 @@
                         </div>
                     </div>
                     <!-- end input goup for password -->
-                    <div  class="form-group row">
-                            <div style="float: left;">
+                    <div  class="form-group row" >
+                            <div style="float: left; padding: 0" >
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -95,7 +95,7 @@
                     </div>
                     <br>
                     <!-- start control buttons -->
-                    <div class="controls row justify-content-md-between">
+                    <div class="controls row justify-content-md-between" style="padding: 0;">
                         <button type="submit" class="submit col-md-3 col-xs-12">login</button>
 {{--                         <button class="facebook_sign col-md-3 col-xs-12"><i class="fab fa-facebook-f"></i></button>
                         <button type="submit" class="google_sign  col-md-3 col-xs-12"><img
@@ -104,7 +104,7 @@
                         <br/> 
                         <br/> 
                         @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                        <a class="btn btn-link" style="padding: 0;" href="{{ route('password.request') }}">
                                 {{ __('Forgot Your Password?') }}
                         </a>
                         @endif

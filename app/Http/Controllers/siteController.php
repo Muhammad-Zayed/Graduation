@@ -19,16 +19,35 @@ class siteController extends Controller
     }
 
     public function meeting($id)
-    {
+    {       
 
-            $host = 10 * $id +((auth()->user()->id == $id) ?1:0);
-            return Redirect('https://192.168.5.57:3030/'.$host);
+            $user = User::findOrfail(auth()->user()->id);
+            if($user->status)
+            return redirect(route('index'));
+
+            $user->status = 1;
+            $user->save();
+            return Redirect('https://localhost:9000/?roomid='.$id.'&userid='. auth()->user()->id);
     }
 
-        public function findUser($id)
+    public function findUser($id)
     {
              $user = User::findOrfail($id);
             return $user;
+    }
+    
+    public function leaveMeeting($id)
+    {
+             $user = User::findOrfail($id);
+             $user->status = 0;
+             $user->save();
+             return redirect(route('index'));
+    }
+    public function close($id)
+    {
+             $user = User::findOrfail($id);
+             $user->status = 0;
+             $user->save();
     }
 }
 

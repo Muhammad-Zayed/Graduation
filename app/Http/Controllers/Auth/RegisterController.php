@@ -82,12 +82,15 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             ]);
         }
-
+        $random = str_shuffle('abcdefghjklmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ234567890!$%^&!$%^&');
+        $data['meeting'] = substr($random, 0, 10);
+        
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'meeting_password' => $data['meeting'],
         ]);
         
     }
