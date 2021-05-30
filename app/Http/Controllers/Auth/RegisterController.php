@@ -55,6 +55,8 @@ class RegisterController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'image'=>'nullable|file|max:2048|mimes:jpg,png,jpeg'
+
         ]);
     }
 
@@ -67,11 +69,26 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         //dd($data);
+        if(array_key_exists('image',$data))
+        {
+            
+            $data['image']= uploader(request(),'image');
+
+            return User::create([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'email' => $data['email'],
+            'image'=> $data['image'],
+            'password' => Hash::make($data['password']),
+            ]);
+        }
+
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        
     }
 }

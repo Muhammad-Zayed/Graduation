@@ -13,15 +13,16 @@
 </head>
 
 <body>
-    @foreach ($errors->all() as $error)
     <div class="msg_container">
+    @foreach ($errors->all() as $error)
         <div class="msg error-msg">
             <i class="fas fa-times-circle"></i>
             {{$error}}
             <i class="hide_not fas fa-times"></i>
         </div>
-    </div>
     @endforeach
+
+    </div>
     <div class="wraper">
         <div class="row  g-0 justify-content-center align-items-center">
             <!-- start image side -->

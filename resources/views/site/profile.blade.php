@@ -29,7 +29,7 @@
                 <!-- start navs -->
                 <div class="navs">
                     <a href="{{route('index')}}">home</a>
-                    <a href="#" id="join_meeting">join meeting</a>
+                    <a href="" id="join_meeting">join meeting</a>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();" class="logout">logout</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
