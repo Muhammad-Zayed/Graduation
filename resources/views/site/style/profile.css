@@ -82,28 +82,38 @@ video::-webkit-media-controls-enclosure {
 }
 
 .wrapper .box-wrap .box.two {
-  -webkit-animation: moveGradient 15s infinite, twoMove 3.5s 0.15s infinite;
-          animation: moveGradient 15s infinite, twoMove 3.5s 0.15s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ twoMove 3.5s 0.15s infinite;
+          animation: moveGradient 15s infinite,
+ twoMove 3.5s 0.15s infinite;
 }
 
 .wrapper .box-wrap .box.three {
-  -webkit-animation: moveGradient 15s infinite, threeMove 3.5s 0.3s infinite;
-          animation: moveGradient 15s infinite, threeMove 3.5s 0.3s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ threeMove 3.5s 0.3s infinite;
+          animation: moveGradient 15s infinite,
+ threeMove 3.5s 0.3s infinite;
 }
 
 .wrapper .box-wrap .box.four {
-  -webkit-animation: moveGradient 15s infinite, fourMove 3.5s 0.575s infinite;
-          animation: moveGradient 15s infinite, fourMove 3.5s 0.575s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ fourMove 3.5s 0.575s infinite;
+          animation: moveGradient 15s infinite,
+ fourMove 3.5s 0.575s infinite;
 }
 
 .wrapper .box-wrap .box.five {
-  -webkit-animation: moveGradient 15s infinite, fiveMove 3.5s 0.725s infinite;
-          animation: moveGradient 15s infinite, fiveMove 3.5s 0.725s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ fiveMove 3.5s 0.725s infinite;
+          animation: moveGradient 15s infinite,
+ fiveMove 3.5s 0.725s infinite;
 }
 
 .wrapper .box-wrap .box.six {
-  -webkit-animation: moveGradient 15s infinite, sixMove 3.5s 0.875s infinite;
-          animation: moveGradient 15s infinite, sixMove 3.5s 0.875s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ sixMove 3.5s 0.875s infinite;
+          animation: moveGradient 15s infinite,
+ sixMove 3.5s 0.875s infinite;
 }
 
 @-webkit-keyframes moveGradient {
@@ -1031,6 +1041,19 @@ video::-webkit-media-controls-enclosure {
 
 .profile_wrapper .content_container .menu_side .navs a {
   display: block;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 100;
+  color: #848484;
+  margin: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#save_image {
+    display: block;
   text-align: center;
   font-size: 26px;
   font-weight: 100;
