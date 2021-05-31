@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="option_btn row align-items-center g-0">
-                            <button class="start_meeting col-2"> Start Meeting </button>
+                            <a href="{{route('meeting',$user->id)}}" class="start_meeting col-2"> Start Meeting</a> 
                             <button class="copy_invite col-3"><span><i class="fad fa-copy"></i></span>Copy Invite
                                 Code</button>
                         </div>
