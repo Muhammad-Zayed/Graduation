@@ -261,7 +261,8 @@
                 <button class="close_btn"><i class="fad fa-times"></i></button>
             </div>
             <div class="join_form">
-                <form action="">
+                <form action="{{route('join')}}" method="POST">
+                    @csrf
                     <div class="input_group">
                         <label for="id">ID</label>
                         <input type="text" name="id">
@@ -270,7 +271,7 @@
                         <label for="id">password</label>
                         <input type="password" name="password">
                     </div>
-                    <button type="submit" class="submit_btn">Join</button>
+                    <input type="submit" class="submit_btn"></input>
                 </form>
             </div>
         </div>

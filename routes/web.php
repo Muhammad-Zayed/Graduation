@@ -19,6 +19,7 @@ Route::get('/meeting/{id}', 'siteController@meeting')->name('meeting')->middlewa
 Route::get('/user/{id}','siteController@findUser');
 Route::get('/leave/{id}','siteController@leaveMeeting');
 Route::post('/changePhoto','siteController@changePhoto')->name('photo')->middleware('auth');
+Route::post('/join','siteController@joinMeeting')->name('join')->middleware('auth');
 Route::get('/close/{id}','siteController@close');
 
 Auth::routes();

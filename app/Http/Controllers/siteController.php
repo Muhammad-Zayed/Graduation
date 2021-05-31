@@ -22,20 +22,52 @@ class siteController extends Controller
 
     public function meeting($id)
     {
-
+            $host = User::findOrfail($id);
             $user = auth()->user();
+
+        if($host->status || $host->id==$user->id){
+
+                if($user->status)
+                    return redirect(route('index'));
+
+                $user->status = 1;
+                $user->save();
+                return Redirect('https://localhost:9000/?roomid='.$id.'&userid='. auth()->user()->id);
+
+            }
+        return back()->withErrors('The Meeting not started');
+    }
+
+    public function joinMeeting(Request $request)
+    {
+
+        $this->validate($request , [
+           'id' => 'required',
+           'password' => 'required'
+        ]);
+
+        $host = User::findOrfail($request->id);
+        $user = auth()->user();
+
+        if ($host->status==0)
+            return back()->withErrors('The Meeting not started');
+
+        if($host->meeting_password == $request->password){
             if($user->status)
-            return redirect(route('index'));
+                return redirect(route('index'));
 
             $user->status = 1;
             $user->save();
             return Redirect('https://localhost:9000/?roomid='.$id.'&userid='. auth()->user()->id);
+        }
+        return back()->withErrors('Password is not correct');
     }
+
 
     public function findUser($id)
     {
              $user = User::findOrfail($id);
-            return $user;
+             return $user;
     }
 
     public function leaveMeeting($id)

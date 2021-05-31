@@ -92,7 +92,7 @@
                         </div>
 
                         <div class="option_btn row align-items-center g-0">
-                            <a href="{{route('meeting',$user->id)}}" class="start_meeting col-2"> Start Meeting</a> 
+                            <a href="{{route('meeting',$user->id)}}" class="start_meeting col-2"> Start Meeting</a>
                             <button class="copy_invite col-3"><span><i class="fad fa-copy"></i></span>Copy Invite
                                 Code</button>
                         </div>
@@ -116,7 +116,8 @@
                     <button class="close_btn"><i class="fad fa-times"></i></button>
                 </div>
                 <div class="join_form">
-                    <form action="">
+                    <form action="{{route('join')}}" method="POST">
+                        @csrf
                         <div class="input_group">
                             <label for="id">ID</label>
                             <input type="text" name="id">
@@ -125,7 +126,7 @@
                             <label for="id">password</label>
                             <input type="password" name="password">
                         </div>
-                        <button type="submit" class="submit_btn">Join</button>
+                        <input type="submit" class="submit_btn"></input>
                     </form>
                 </div>
             </div>
