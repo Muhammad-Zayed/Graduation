@@ -44,10 +44,13 @@
                 <div class="navs">
                     <a href="{{route('index')}}">home</a>
                     <a href="" id="join_meeting">join meeting</a>
-                    <form action="{{route('photo')}}" method="POST" enctype="multipart/form-data" >
+                    <form action="{{route('photo')}}" method="POST" enctype="multipart/form-data" class="img_form" >
                         @csrf
-                        <input type="submit" value="Change Photo" id="save_image">
-                        <input type="file" name="image" enctype="multipart/form-data">
+                        <div class="fileUpload">
+                            <input type="file" name="image" enctype="multipart/form-data" class="img_input">
+                            <span>Upload</span>
+                        </div>
+                        <input type="submit" value="Save" id="save_image" class="img_submit">
                     </form>
 
                     <a href="{{ route('logout') }}" onclick="event.preventDefault();
