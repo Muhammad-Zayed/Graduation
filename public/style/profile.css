@@ -1077,8 +1077,11 @@ video::-webkit-media-controls-enclosure {
     padding: 5px 5px; /*14px/16px*/
     position: relative;
     text-align: center;
-    width: 80px;
+    /*width: 80px;*/
     cursor: pointer;
+}
+.profile_wrapper .content_container .menu_side .img_form .fileUpload:hover {
+    background: #0188d1;
 }
 .profile_wrapper .content_container .menu_side .img_form .img_submit {
     background: #1b9435;
@@ -1089,7 +1092,7 @@ video::-webkit-media-controls-enclosure {
     color: #fff;
     font-size: 1em;
     font-weight: bold;
-    margin: 15px;
+    margin: 15px 0px;
     /*margin: 1.1em auto; /*20px/16px 0*/
     overflow: hidden;
     padding: 5px 5px; /*14px/16px*/
@@ -1097,6 +1100,9 @@ video::-webkit-media-controls-enclosure {
     text-align: center;
     width: 80px;
     cursor: pointer;
+}
+.profile_wrapper .content_container .menu_side .img_form .img_submit:hover {
+    background: #20b841;
 }
 .profile_wrapper .content_container .menu_side .img_form .fileUpload>input{
         position: absolute;
