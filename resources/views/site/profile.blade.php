@@ -72,8 +72,8 @@
                             <p class="item_cont col-9">{{$user->first_name }} {{$user->last_name}} Personal Meeting Room</p>
                         </div>
                         <div class="item row justify-content-center align-items-center g-0">
-                            <p class="item_title col-2">Meeting ID :</p>
-                            <p class="item_cont col-9"><input type="text" value="{{$user->id}}" disabled>
+                            <p class="item_title col-2">Meeting ID</p>
+                            <p class="item_cont col-9"><input type="text" value=" : {{$user->id}}" disabled>
                         </div>
 
                         <div class="item row justify-content-center align-items-center g-0">
