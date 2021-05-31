@@ -82,28 +82,38 @@ video::-webkit-media-controls-enclosure {
 }
 
 .wrapper .box-wrap .box.two {
-  -webkit-animation: moveGradient 15s infinite, twoMove 3.5s 0.15s infinite;
-          animation: moveGradient 15s infinite, twoMove 3.5s 0.15s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ twoMove 3.5s 0.15s infinite;
+          animation: moveGradient 15s infinite,
+ twoMove 3.5s 0.15s infinite;
 }
 
 .wrapper .box-wrap .box.three {
-  -webkit-animation: moveGradient 15s infinite, threeMove 3.5s 0.3s infinite;
-          animation: moveGradient 15s infinite, threeMove 3.5s 0.3s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ threeMove 3.5s 0.3s infinite;
+          animation: moveGradient 15s infinite,
+ threeMove 3.5s 0.3s infinite;
 }
 
 .wrapper .box-wrap .box.four {
-  -webkit-animation: moveGradient 15s infinite, fourMove 3.5s 0.575s infinite;
-          animation: moveGradient 15s infinite, fourMove 3.5s 0.575s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ fourMove 3.5s 0.575s infinite;
+          animation: moveGradient 15s infinite,
+ fourMove 3.5s 0.575s infinite;
 }
 
 .wrapper .box-wrap .box.five {
-  -webkit-animation: moveGradient 15s infinite, fiveMove 3.5s 0.725s infinite;
-          animation: moveGradient 15s infinite, fiveMove 3.5s 0.725s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ fiveMove 3.5s 0.725s infinite;
+          animation: moveGradient 15s infinite,
+ fiveMove 3.5s 0.725s infinite;
 }
 
 .wrapper .box-wrap .box.six {
-  -webkit-animation: moveGradient 15s infinite, sixMove 3.5s 0.875s infinite;
-          animation: moveGradient 15s infinite, sixMove 3.5s 0.875s infinite;
+  -webkit-animation: moveGradient 15s infinite,
+ sixMove 3.5s 0.875s infinite;
+          animation: moveGradient 15s infinite,
+ sixMove 3.5s 0.875s infinite;
 }
 
 @-webkit-keyframes moveGradient {
@@ -1116,6 +1126,7 @@ video::-webkit-media-controls-enclosure {
   border: none;
   outline: none;
   resize: none;
+  height: 24px;
 }
 
 .profile_wrapper .content_container .info_side .info_container .info .item textarea::-moz-selection {
@@ -1169,12 +1180,25 @@ video::-webkit-media-controls-enclosure {
   outline: none;
 }
 
-.profile_wrapper .content_container .info_side .info_container .info .option_btn button.start_meeting {
+.profile_wrapper .content_container .info_side .info_container .info .option_btn a.start_meeting {
   background-color: #006CA8;
   color: #E2E2E2;
+  margin-right: 10px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
-.profile_wrapper .content_container .info_side .info_container .info .option_btn button.start_meeting:hover {
+.profile_wrapper .content_container .info_side .info_container .info .option_btn a.start_meeting:hover {
   background-color: #0085cc;
 }
 

@@ -54,27 +54,27 @@
                     <h2 class="title">profile</h2>
                     <div class="info">
                         <div class="item row justify-content-center align-items-center g-0">
-                            <p class="item_title col-2">host</p>
+                            <p class="item_title col-2">host :</p>
                             <p class="item_cont col-9">{{$user->first_name }} {{$user->last_name}} Personal Meeting Room</p>
                         </div>
                         <div class="item row justify-content-center align-items-center g-0">
-                            <p class="item_title col-2">Meeting ID</p>
-                            <p class="item_cont col-9"><input type="text" value=" : {{$user->id}}" disabled>
+                            <p class="item_title col-2">Meeting ID :</p>
+                            <p class="item_cont col-9"><input type="text" value="{{$user->id}}" disabled>
                         </div>
 
                         <div class="item row justify-content-center align-items-center g-0">
-                            <p class="item_title col-2">join URL</p>
+                            <p class="item_title col-2">join URL :</p>
                             <textarea class="item_cont col-9" id="invite_code"
                                 disabled>http://127.0.0.1:8000/meeting/{{$user->id}} </textarea>
                         </div>
                         <div class="item row justify-content-center align-items-center g-0">
-                            <p class="item_title col-2">email</p>
+                            <p class="item_title col-2">email :</p>
                             <p class="item_cont col-9">{{$user->email}}</p>
                         </div>
 
                         <div class="item row justify-content-center align-items-center g-0">
-                            <p class="item_title col-3">meeting password</p>
-                            <p class="item_cont col-8">: {{$user->meeting_password}}</p>
+                            <p class="item_title col-4">meeting password :</p>
+                            <p class="item_cont col-7">{{$user->meeting_password}}</p>
                         </div>
 
                         <div class="option_btn row align-items-center g-0">
