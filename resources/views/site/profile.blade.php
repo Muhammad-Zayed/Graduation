@@ -37,6 +37,14 @@
                         <img src="/images/avatar.png" alt="">
                     @endif
                     <h3 class="name">{{ $user->first_name }}</h3>
+                        <form action="{{route('photo')}}" method="POST" enctype="multipart/form-data" class="img_form">
+                            @csrf
+                            <div class="fileUpload">
+                                <input type="file" name="image" enctype="multipart/form-data" class="img_choose">
+                                <span>Choose Image</span>
+                            </div>
+                            <input type="submit" value="Save" id="save_image" class="img_submit">
+                        </form>
                 </div>
                 <!-- end title  -->
 
@@ -44,14 +52,7 @@
                 <div class="navs">
                     <a href="{{route('index')}}">home</a>
                     <a href="" id="join_meeting">join meeting</a>
-                    <form action="{{route('photo')}}" method="POST" enctype="multipart/form-data" class="img_form">
-                        @csrf
-                        <div class="fileUpload">
-                            <input type="file" name="image" enctype="multipart/form-data" class="img_choose">
-                            <span>Choose Image</span>
-                        </div>
-                        <input type="submit" value="Save" id="save_image" class="img_submit">
-                    </form>
+
 
                     <a href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();" class="logout">logout</a>
