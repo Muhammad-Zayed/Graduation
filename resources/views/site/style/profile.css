@@ -1052,8 +1052,8 @@ video::-webkit-media-controls-enclosure {
   transition: all 0.3s ease-in-out;
 }
 
-#save_image {
-    display: block;
+#save_image {   
+  display: block;
   text-align: center;
   font-size: 26px;
   font-weight: 100;

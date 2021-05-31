@@ -13,6 +13,16 @@
 </head>
 
 <body>
+<div class="msg_container">
+    @foreach ($errors->all() as $error)
+        <div class="msg error-msg">
+            <i class="fas fa-times-circle"></i>
+            {{$error}}
+            <i class="hide_not fas fa-times"></i>
+        </div>
+    @endforeach
+
+</div>
     <!-- start wrapper -->
     <div class="profile_wrapper row justify-content-center align-items-center">
         <!-- start content container -->
@@ -21,7 +31,11 @@
             <div class="menu_side col-3">
                 <!-- start title  -->
                 <div class="title">
-                    <img src="./images/mostafa.png" alt="">
+                    @if($user->image)
+                        <img src="{{asset('storage/'.$user->image)}}" alt="">
+                    @else
+                        <img src="/images/avatar.png" alt="">
+                    @endif
                     <h3 class="name">{{ $user->first_name }}</h3>
                 </div>
                 <!-- end title  -->
@@ -30,7 +44,7 @@
                 <div class="navs">
                     <a href="{{route('index')}}">home</a>
                     <a href="" id="join_meeting">join meeting</a>
-                    <form action="" method="POST">
+                    <form action="{{route('photo')}}" method="POST" enctype="multipart/form-data" >
                         @csrf
                         <input type="submit" value="Change Photo" id="save_image">
                         <input type="file" name="image" enctype="multipart/form-data">
@@ -131,7 +145,7 @@
                 </div>
             </div>
         </div>
-        <!-- start laoding page -->     
+        <!-- start laoding page -->
         <script src="./plugins/bootstrap.min.js"></script>
         <script src="./js/profile.js"></script>
         <script src="./js/loadingpage.js"></script>
