@@ -58,7 +58,7 @@ class siteController extends Controller
 
             $user->status = 1;
             $user->save();
-            return Redirect('https://localhost:9000/?roomid='.$id.'&userid='. auth()->user()->id);
+            return Redirect('https://localhost:9000/?roomid='.$host->id.'&userid='. auth()->user()->id);
         }
         return back()->withErrors('Password is not correct');
     }
